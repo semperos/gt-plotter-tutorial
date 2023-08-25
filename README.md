@@ -1,0 +1,1 @@
+## Installation```Metacello new	repository: '';	baseline: 'GtDgPlotterTutorial';	load```## Load Lepiter				After installing with Metacello, you will be able to execute```#BaselineOfGtDgPlotterTutorial asClass loadLepiter```
