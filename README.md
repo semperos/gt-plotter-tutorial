@@ -1,1 +1,1 @@
-## Installation```Metacello new	repository: '';	baseline: 'GtDgPlotterTutorial';	load```## Load Lepiter				After installing with Metacello, you will be able to execute```#BaselineOfGtDgPlotterTutorial asClass loadLepiter```
+## Installation```Metacello new	repository: 'github://semperos/gt-plotter-tutorial:main/src';	baseline: 'GtDgPlotterTutorial';	load```## Load Lepiter				After installing with Metacello, you will be able to execute```#BaselineOfGtDgPlotterTutorial asClass loadLepiter```
