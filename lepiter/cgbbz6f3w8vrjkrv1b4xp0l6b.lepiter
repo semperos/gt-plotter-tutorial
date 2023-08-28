@@ -29,7 +29,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T00:17:36.623056-04:00"
+						"dateAndTimeString" : "2023-08-26T22:22:38.753461-04:00"
 					}
 				},
 				"uid" : {
@@ -39,7 +39,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Here is the play data and the bar chart we left off with in [[GT Plotter Tutorial]]"
+				"string" : "Here is the play data and the bar chart we left off with in [[I. GtPlotterHorizontalBarChart Walk-through]]"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -66,14 +66,14 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T00:17:44.598635-04:00"
+						"dateAndTimeString" : "2023-08-26T22:27:29.295712-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "Jkv7XBnADQCjgGOqAW1Z0g=="
 				},
-				"code" : "playData := {{#name -> 'Michael'.\r\t\t\t#age -> 13} asDictionary.\r\t\t{#name -> 'Annabelle'.\r\t\t\t#age -> 12} asDictionary.\r\t\t{#name -> 'Emilia'.\r\t\t\t#age -> 10} asDictionary.\r\t\t{#name -> 'Rachel'.\r\t\t\t#age -> 4} asDictionary}."
+				"code" : "playData := {{#name -> 'Michael'.\r\t\t\t#age -> 13} asDictionary.\r\t\t{#name -> 'Annabelle'.\r\t\t\t#age -> 12} asDictionary.\r\t\t{#name -> 'Emilia'.\r\t\t\t#age -> 10} asDictionary.\r\t\t{#name -> 'Rachel'.\r\t\t\t#age -> 4} asDictionary.\r\t\t{#name -> 'Sam'.\r\t\t\t#age -> 7} asDictionary.\r\t\t{#name -> 'Leon'.\r\t\t\t#age -> 25} asDictionary.\r\t\t{#name -> 'Ophelia'.\r\t\t\t#age -> 18} asDictionary.\r\t\t{#name -> 'Hala'.\r\t\t\t#age -> 23} asDictionary.\r\t\t{#name -> 'Edward'.\r\t\t\t#age -> 23} asDictionary.\r\t\t{#name -> 'Brianna'.\r\t\t\t#age -> 19} asDictionary}"
 			},
 			{
 				"__type" : "pharoSnippet",
@@ -316,14 +316,122 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T00:38:42.262711-04:00"
+						"dateAndTimeString" : "2023-08-26T22:43:42.386858-04:00"
 					}
 				},
 				"uid" : {
 					"__type" : "uid",
 					"uidString" : "bC/YphnADQCxGAgMAW1Z0g=="
 				},
-				"code" : "GtDgPlotterHorizontalBarChart new\r\tbarWidthData: [ :d | d at: #age ];\r\tbarWidthScale: (GtPlotterLinearScale new domainFrom: 0 to: 15);\r\tamountOfTicks: 15;\r\ttickLabelFormat: [ :age | age isZero ifTrue: [ '0 yrs' ] ifFalse: [ age asString ] ];\r\twith: ((GtPlotterDataGroup new values: playData) labelled: [ :d | d at: #name ])"
+				"code" : "GtDgPlotterHorizontalBarChart new\r\ttitleChart: 'Team Ages';\r\ttitleX: 'Age (years)';\r\ttitleY: 'Name';\r\tbarWidthData: [ :d | d at: #age ];\r\tbarWidthScale: (GtPlotterLinearScale new\r\t\t\tdomainFrom: 0\r\t\t\tto: (playData inject: 0 into: [ :acc :d | acc max: (d at: #age) ]));\r\tamountOfTicks: 15;\r\ttickLabelFormat: [ :age | age isZero ifTrue: [ '0 yrs' ] ifFalse: [ age asString ] ];\r\twith: ((GtPlotterDataGroup new values: playData) labelled: [ :d | d at: #name ])"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T22:43:44.814833-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T22:43:49.607196-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "agOMSEDADQC8xbF7DvhR+w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "It would be nice to sort these bars:"
+			},
+			{
+				"__type" : "pharoSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-26T22:43:55.042138-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-28T12:40:39.172957-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "9hAoSUDADQC9jGBYDvhR+w=="
+				},
+				"code" : "dataGroup := GtPlotterDataGroup new values: playData.\rdataGroup := dataGroup sorted: [ :d1 :d2 | (d1 at: #age) > (d2 at: #age) ].\rdataGroup := dataGroup labelled: [ :d | d at: #name ].\rGtDgPlotterHorizontalBarChart new\r\ttitleChart: 'Team Ages';\r\ttitleX: 'Age (years)';\r\ttitleY: 'Name';\r\tbarWidthData: [ :d | d at: #age ];\r\tbarWidthScale: (GtPlotterLinearScale new\r\t\t\tdomainFrom: 0\r\t\t\tto: (playData inject: 0 into: [ :acc :d | acc max: (d at: #age) ]));\r\tamountOfTicks: 15;\r\ttickLabelFormat: [ :age | age isZero ifTrue: [ '0 yrs' ] ifFalse: [ age asString ] ];\r\twith: dataGroup"
+			},
+			{
+				"__type" : "textSnippet",
+				"children" : {
+					"__type" : "snippets",
+					"items" : [ ]
+				},
+				"createEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"createTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-28T12:41:16.273138-04:00"
+					}
+				},
+				"editEmail" : {
+					"__type" : "email",
+					"emailString" : "<unknown>"
+				},
+				"editTime" : {
+					"__type" : "time",
+					"time" : {
+						"__type" : "dateAndTime",
+						"dateAndTimeString" : "2023-08-28T12:52:39.144833-04:00"
+					}
+				},
+				"uid" : {
+					"__type" : "uid",
+					"uidString" : "JsubGWDADQCBKZ2YDvhR+w=="
+				},
+				"paragraphStyle" : {
+					"__type" : "textStyle"
+				},
+				"string" : "Ooh, the order of calling `sorted:` and `labelled:` matters. If you do labelled first, the labels are erased when sorted is called."
 			}
 		]
 	},
@@ -346,12 +454,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-25T00:17:15.286804-04:00"
+			"dateAndTimeString" : "2023-08-26T22:14:34.43886-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "Extending GtPlotterHorizontalBarChart with Axis Titles"
+		"title" : "Extending GtPlotterHorizontalBarChart"
 	},
 	"uid" : {
 		"__type" : "uuid",

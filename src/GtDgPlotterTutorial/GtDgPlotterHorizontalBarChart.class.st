@@ -6,7 +6,8 @@ Class {
 	#superclass : #GtPlotterHorizontalBarChart,
 	#instVars : [
 		'titleX',
-		'titleY'
+		'titleY',
+		'titleChart'
 	],
 	#category : #GtDgPlotterTutorial
 }
@@ -105,7 +106,22 @@ GtDgPlotterHorizontalBarChart >> newChartTitleElement [
 				glamorousCodeFont;
 				foreground: Color darkGray;
 				fontSize: 16);
-		text: (titleX ifNil: '<No Title>') asRopedText;
+		text: (titleChart ifNil: '<No Title>') asRopedText;
 		constraintsDo: [ :c | c linear horizontal alignCenter ];
 		margin: (BlInsets bottom: 10)
+]
+
+{ #category : #accessing }
+GtDgPlotterHorizontalBarChart >> titleChart: aString [ 
+	titleChart := aString
+]
+
+{ #category : #accessing }
+GtDgPlotterHorizontalBarChart >> titleX: aString [
+	titleX := aString
+]
+
+{ #category : #accessing }
+GtDgPlotterHorizontalBarChart >> titleY: aString [ 
+	titleY := aString
 ]

@@ -2383,7 +2383,7 @@
 					"__type" : "time",
 					"time" : {
 						"__type" : "dateAndTime",
-						"dateAndTimeString" : "2023-08-25T00:16:52.218963-04:00"
+						"dateAndTimeString" : "2023-08-26T22:23:09.026971-04:00"
 					}
 				},
 				"uid" : {
@@ -2393,7 +2393,7 @@
 				"paragraphStyle" : {
 					"__type" : "textStyle"
 				},
-				"string" : "Check out the [[Extending GtPlotterHorizontalBarChart with Axis Titles]] for the last option."
+				"string" : "**Next:** Check out the [[Extending GtPlotterHorizontalBarChart]] for the last option."
 			}
 		]
 	},
@@ -2416,12 +2416,12 @@
 		"__type" : "time",
 		"time" : {
 			"__type" : "dateAndTime",
-			"dateAndTimeString" : "2023-08-24T09:00:54.405001-04:00"
+			"dateAndTimeString" : "2023-08-26T22:22:38.744964-04:00"
 		}
 	},
 	"pageType" : {
 		"__type" : "namedPage",
-		"title" : "GT Plotter Tutorial"
+		"title" : "I. GtPlotterHorizontalBarChart Walk-through"
 	},
 	"uid" : {
 		"__type" : "uuid",
