@@ -2,7 +2,7 @@
 I am a horizontal bar chart that has been extended to support more than my superclass.
 "
 Class {
-	#name : #GtDgPlotterHorizontalBarChart,
+	#name : #GtDgPlotterTutorialHorizontalBarChart,
 	#superclass : #GtPlotterHorizontalBarChart,
 	#instVars : [
 		'titleX',
@@ -13,7 +13,7 @@ Class {
 }
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> create [
+GtDgPlotterTutorialHorizontalBarChart >> create [
 	<return: #Object>
 	| topContainer midContainer theBars chartContainer yTitle |
 	topContainer := BlElement new
@@ -78,7 +78,7 @@ GtDgPlotterHorizontalBarChart >> create [
 ]
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> newAxisXTitleElement [
+GtDgPlotterTutorialHorizontalBarChart >> newAxisXTitleElement [
 	^ BrLabel new
 		aptitude: (BrGlamorousLabelAptitude new
 				glamorousCodeFont;
@@ -89,7 +89,7 @@ GtDgPlotterHorizontalBarChart >> newAxisXTitleElement [
 ]
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> newAxisYTitleElement [
+GtDgPlotterTutorialHorizontalBarChart >> newAxisYTitleElement [
 	^ BrLabel new
 		aptitude: (BrGlamorousLabelAptitude new
 				glamorousCodeFont;
@@ -100,7 +100,7 @@ GtDgPlotterHorizontalBarChart >> newAxisYTitleElement [
 ]
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> newChartTitleElement [
+GtDgPlotterTutorialHorizontalBarChart >> newChartTitleElement [
 	^ BrLabel new
 		aptitude: (BrGlamorousLabelAptitude new
 				glamorousCodeFont;
@@ -112,16 +112,16 @@ GtDgPlotterHorizontalBarChart >> newChartTitleElement [
 ]
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> titleChart: aString [ 
+GtDgPlotterTutorialHorizontalBarChart >> titleChart: aString [ 
 	titleChart := aString
 ]
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> titleX: aString [
+GtDgPlotterTutorialHorizontalBarChart >> titleX: aString [
 	titleX := aString
 ]
 
 { #category : #accessing }
-GtDgPlotterHorizontalBarChart >> titleY: aString [ 
+GtDgPlotterTutorialHorizontalBarChart >> titleY: aString [ 
 	titleY := aString
 ]
